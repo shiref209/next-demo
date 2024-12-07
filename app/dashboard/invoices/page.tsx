@@ -18,7 +18,6 @@ export default async function Page(props: {
   const query = searchParams?.query ?? "";
   const currentPage = parseInt(searchParams?.page ?? "1", 10);
   const totalPages = await fetchInvoicesPages(query);
-  console.log("totalPages", totalPages);
   return (
     <div className="w-full">
       <div className="flex w-full items-center justify-between">
